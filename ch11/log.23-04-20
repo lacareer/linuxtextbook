@@ -1,0 +1,14 @@
+total 56
+drwxrwxr-x. 2 chuks-centos-7 chuks-centos-7    83 Apr 20 23:15 .
+drwxrwxr-x. 3 chuks-centos-7 chuks-centos-7    18 Apr 20 18:40 ..
+-rwxrw-r--. 1 chuks-centos-7 chuks-centos-7  3924 Apr 20 23:15 ch11.sh
+-rw-rw-r--. 1 chuks-centos-7 chuks-centos-7    14 Apr 20 22:28 input-redirect.txt
+-rw-rw-r--. 1 chuks-centos-7 chuks-centos-7     0 Apr 20 23:16 log.23-04-20
+-rw-rw-r--. 1 chuks-centos-7 chuks-centos-7 47045 Apr 20 23:15 rpm.list
+total 60
+drwxrwxr-x. 2 chuks-centos-7 chuks-centos-7    83 Apr 20 23:15 .
+drwxrwxr-x. 3 chuks-centos-7 chuks-centos-7    18 Apr 20 18:40 ..
+-rwxrw-r--. 1 chuks-centos-7 chuks-centos-7  3924 Apr 20 23:15 ch11.sh
+-rw-rw-r--. 1 chuks-centos-7 chuks-centos-7    14 Apr 20 22:28 input-redirect.txt
+-rw-rw-r--. 1 chuks-centos-7 chuks-centos-7   441 Apr 20 23:16 log.23-04-20
+-rw-rw-r--. 1 chuks-centos-7 chuks-centos-7 47045 Apr 20 23:15 rpm.list
