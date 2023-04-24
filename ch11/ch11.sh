@@ -42,7 +42,7 @@ days=5
 guest="Jessica"
 
 # Prints:  "Always escape the dollar sign when jused in a string as a symbool: 5" bcs $1 is an undefined variable
-echo "Always escape the dollar sign when jused in a string as a symbool: $15"
+echo "Always escape the dollar sign when used in a string as a symbool: $15"
 echo
 
 #*** reassigning a variable******
