@@ -37,7 +37,6 @@ echo ""
 #       then
 #           commands
 #       else command 2
-#       then
 #           commands
 #       fi
 
