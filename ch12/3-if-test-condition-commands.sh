@@ -135,3 +135,68 @@ then
 else
     echo "The user variable contains the string: christine"
 fi
+
+echo ""
+echo "Example 7: string comparison"
+echo ""
+
+str1=soccer
+str2=zorbfootball
+str3=""
+
+# You must escape the > (\>) or < (\<) when used to compare 
+# Otherwise bash will consider to be output redirect and will create 
+# a file with name the value of str2 (zorbfootball)
+# as this example shows
+
+#wrong way
+if [ $str1 > $str2 ]
+then
+    echo "$str1 is greater than $str2"
+else
+    echo "$str1 is less than $str2"
+fi
+
+echo ""
+
+#remove the zorbfootball file created from the  wrong way above
+rm -rf $str2
+
+# right way
+if [ $str1 \> $str2 ]
+then
+    echo "$str1 is greater than $str2"
+else
+    echo "$str1 is less than $str2"
+fi
+
+echo ""
+
+if [ -n $str1 ]
+then
+    echo "$str1 has a length greater than zero"
+else
+    echo "$str1 has a length less than zero"
+fi
+
+echo ""
+
+if [ -z $str3 ]
+then
+    echo "str3 has a length less than zero"
+else
+    echo "$str3 has a length greater than zero"
+fi
+
+echo ""
+# same result as [-z str3] bcs str4 is not defined
+# best practice is to always check for string varaible length 
+# using -n or -z b4 using them in your shell script
+if [ -z $str4 ] 
+then
+    echo "Undefined strings have a length less than zero"
+else
+    echo "$str4 has a length greater than zero"
+fi
+
+echo ""
