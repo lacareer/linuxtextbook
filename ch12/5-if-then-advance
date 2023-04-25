@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# ADVANCE IF-THEN CONSTRUCTS
+
+# 1. Compound testing
+
+#  syntax:
+# [ condition1 ] && [ condition2 ]
+# [ condition 1 ] || [ condition2 ]
+
+echo ""
+
+if [ -d $HOME ] && [ -w $HOME/newfile ]
+then 
+    echo "The file exist and you can write to it"
+    echo ""
+else
+    echo "You cannot write to the file"
+    echo ""
+fi
+
+echo ""
+
+if [ -d $HOME ] || [ -w $HOME/newfile ]
+then 
+    echo "The file exist and you can write to it"
+    echo ""
+else
+    echo "You cannot write to the file"
+    echo ""
+fi
+
+echo ""
+
+# 2. SINGLE PARENTHESIS()
+# used to start a subshell and evalustes to true or false using the exit code of zero and non-zero
+# to evaluate to true and false respectively
+
+
+
+# 3. DOUBLE PARENTHESIS(())
+# used to calculate mathematical expressions
+
+
+
+# 4. DOUBLE BRACKET [[]]
+# used for string comparison
