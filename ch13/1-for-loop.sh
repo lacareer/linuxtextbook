@@ -86,5 +86,58 @@ file="states.txt"
 
 for state in $(cat $file)
 do 
-    echo You shou visit the beatiful state of $state
+    echo You should visit the beatiful state of $state
 done 
+
+# By default,Bash considers "soace, tab, and newline" as filed separators
+# However, you can tell bash which of them you want to use or define yours
+# You can define as many IFS as you want
+# It is best practice to reset the IFS to default after setting it
+
+echo 
+echo "For-loop Example-5a. Choosing to use one of Bash IFS - Internal field seperators"
+echo 
+
+# setting which default Bash IFS to use
+# In this case newline bcs we want to treat each line content in the files
+# as a group as s hown in the file ifs.txt
+
+IFS=$IFS # SAVES DEFAULT IFS: Use for resetting
+IFS=$'\n' # SETTTING OUR PREFERENCE TO USE FROM DEFAULT IFS
+
+file="ifs.txt"
+
+for state in $(cat $file)
+do 
+    echo You should visit the beatiful state of $state
+done 
+
+IFS=$IFS #resets IFS back to deafult
+
+echo $IFS
+
+echo 
+echo "For-loop Example-5b. Choosing to use one of Bash IFS - Internal field seperators"
+echo 
+
+# setting which Bash IFS to use
+# and define some of ours as shown in our customIFS.txt file
+# Remember to string the IFS characters show below by 
+# wrapping double quotes arounf the chanracters and using  single quotes for
+# wrapping double quotes
+
+# here we: \n, :, ;, *, and "  to define our IFS and 
+# wrapping each using "" or ''as neccessary
+
+IFS=$IFS # SAVES DEFAULT IFS: Use for resetting
+
+IFS=$'\n'":""*"";"'"' # CUSTOM IFS
+
+file="customIFS.txt"
+
+for state in $(cat $file)
+do 
+    echo You should visit the beatiful state of $state
+done 
+
+IFS=$IFS #resets IFS back to deafult
