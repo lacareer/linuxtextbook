@@ -1,0 +1,57 @@
+#!/bin/bash
+###############################################################################
+echo 
+echo "This scripts shows how to redirect out of a loop to a file"
+echo 
+###############################################################################
+
+echo ""
+echo "Example 1a: Redirection of loop output to a file"
+echo ""
+
+# make sure to wrap the variable $file in double quotes as this takes care of 
+# files and folders that contains spaces
+
+# output of the loop is not printed to the screen but redirect to a file 
+# by adding the redirection to the end of the done command of the loop
+for file in /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+do 
+    if [ -d "$file" ]
+    then
+        echo "$file is a directory"
+    elif [ -f "$file" ]
+    then
+        echo "$file is a file"
+    fi
+done > checkFileRedirect.txt
+
+echo "Loop has commpleted and output redirected to to checkFileRedirect.txt"
+echo
+
+echo ""
+echo "Example 1b: Sorting loop output and redirecting to a file"
+echo ""
+
+#  one can add pipe and other bash commands in the redirection of a loop to a file
+
+for number in May June December September April October
+do
+    echo $number
+done | sort -M > monthSort.txt
+
+echo "Loop has commpleted and output redirected to to monthSort.txt"
+echo
+
+echo ""
+echo "Example 1c: Sorting loop output and redirecting to a file"
+echo ""
+
+#  one can add pipe and other bash commands in the redirection of a loop to a file
+
+for number in 23 4 19 10 134 100 45 25
+do
+    echo $number
+done | sort -n > numberSort.txt
+
+echo "Loop has commpleted and output redirected to to numberSort.txt"
+echo
