@@ -23,7 +23,7 @@ echo
 echo "We have $# paramter/s"
 echo
 
-if [ $# -gt 0 ]
+if [ "$#" -gt 0 ]
 then
     echo "We have a total of $# parameters"
     echo
