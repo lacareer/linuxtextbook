@@ -11,7 +11,7 @@ echo
 echo "Nested loop Example-1a:  Breaking out of an outer loop"
 echo 
 
-# 'break' command is used to exit any kind of loop in progress
+# 'break' command is used to exit/terminate any kind of loop in progress
 # You can break out of a single or  nested loop
 
 # stops print value at 5 (instead of 1-10) because of the 'break' command
@@ -106,3 +106,27 @@ do
         num=$[ $num - 1 ]
     done
 done
+
+echo 
+echo "Nested loop Example-3a: Continue out of an outer loop"
+echo 
+
+# 'continue' command is used to prematurely stop commands in any loop but not terminate it
+#  it moves to the next iteration, if there is any left, when the keyword 'continue' is encountered
+#  all commands after the keyword are not executed
+#  As with the 'break' command, the 'continue' command also uses the n flag to indicate level
+# 'continue n'
+
+for (( a = 1; a < 15; a++ ))
+do 
+    echo
+    if [ $a -gt 5 ] && [ $a -lt 10 ]
+    then
+        # Does not execute the below echo of skips it without 
+        # terminating the loop like a 'break statement' might do
+        # when the condition in the if statement is true
+        # so, this code not echo for a=6 to a=9
+        continue 
+    fi
+    echo "Current outer loop value: $a"
+done 
