@@ -158,7 +158,7 @@ do
 done 
 
 echo 
-echo "For-loop Example-6. Reading mutiple and using directories using wildcards"
+echo "For-loop Example-6b. Reading mutiple and using directories using wildcards"
 echo 
 
 # make sure to wrap the variable $file in double quotes as this takes care of 
@@ -175,3 +175,37 @@ do
         echo "$file is a file"
     fi
 done 
+
+echo 
+echo "For-loop Example-7a. C language style for-loop"
+echo 
+
+#### syntax for C language
+
+# for(i = 0; i < 10; i++)
+# {
+#     printf("The next number is %d\n", i)
+# }
+
+# ###### Bash style
+
+# for((variable assignment; condition; iteration process))
+# do
+#     command/s
+# done
+
+for((i = 1; i <= 10; i++))
+do
+    echo "The next number is: $i"
+    echo
+done
+
+echo 
+echo "For-loop Example-7b. C language style for-loop"
+echo 
+# here we define 2 variable, one condition, and 2 iteration process
+for((a = 1, b = 10; a <= 10; a++, b--))
+do
+    echo "The difference between $a and $b is: $a - $b"
+    echo
+done
