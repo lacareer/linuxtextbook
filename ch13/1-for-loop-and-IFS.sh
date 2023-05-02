@@ -102,7 +102,7 @@ echo
 # In this case newline bcs we want to treat each line content in the files
 # as a group as s hown in the file ifs.txt
 
-IFS=$IFS # SAVES DEFAULT IFS: Use for resetting
+oldIFS=$IFS # SAVES DEFAULT IFS: Use for resetting
 IFS=$'\n' # SETTTING OUR PREFERENCE TO USE FROM DEFAULT IFS
 
 file="ifs.txt"
@@ -112,9 +112,7 @@ do
     echo You should visit the beatiful state of $state
 done 
 
-IFS=$IFS #resets IFS back to deafult
-
-echo $IFS
+oldIFS=$IFS #resets IFS back to deafult
 
 echo 
 echo "For-loop Example-5b. Choosing to use one of Bash IFS - Internal field seperators"
@@ -129,7 +127,7 @@ echo
 # here we: \n, :, ;, *, and "  to define our IFS and 
 # wrapping each using "" or ''as neccessary
 
-IFS=$IFS # SAVES DEFAULT IFS: Use for resetting
+oldIFS=$IFS # SAVES DEFAULT IFS: Use for resetting
 
 IFS=$'\n'":""*"";"'"' # CUSTOM IFS
 
@@ -140,4 +138,40 @@ do
     echo You should visit the beatiful state of $state
 done 
 
-IFS=$IFS #resets IFS back to deafult
+IFS=$oldIFS #resets IFS back to deafult
+
+echo 
+echo "For-loop Example-6a. Reading directories using wildcards"
+echo 
+
+# make sure to wrap the variable $file in double quotes as this takes care of 
+# files and folders that contains spaces
+for file in /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+do 
+    if [ -d "$file" ]
+    then
+        echo "$file is a directory"
+    elif [ -f "$file" ]
+    then
+        echo "$file is a file"
+    fi
+done 
+
+echo 
+echo "For-loop Example-6. Reading mutiple and using directories using wildcards"
+echo 
+
+# make sure to wrap the variable $file in double quotes as this takes care of 
+# files and folders that contains spaces
+# note that the loop iterates thru the first condition and once completed
+# iterates through the next condition and so on....
+for file in  /home/centos-docker-host/Desktop/* /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+do 
+    if [ -d "$file" ]
+    then
+        echo "$file is a directory"
+    elif [ -f "$file" ]
+    then
+        echo "$file is a file"
+    fi
+done 
