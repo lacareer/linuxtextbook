@@ -10,7 +10,7 @@ echo
 # This is because the is no error handling yet in this script and avoids error
 
 # Positional params are access as variables like below:
-# position o => $0 or ${0} (gives you the script name prefixed with the path)
+# position 0 => $0 or ${0} (gives you the script name prefixed with the path)
 # position 1...9 => $1...$9 or ${1}-${9} (you can use any option)
 # position 10...nth => ${10}....${nth} (can only use this option)
 
