@@ -11,7 +11,7 @@ echo
 # *************
 
 # SYNTAX
-# get optstring parameters
+# getopt optstring parameters
 
 # First list each command-line option letter you are going to 
 # use in your script in the in the 'optstring'. THen place a colon, :,
