@@ -35,7 +35,9 @@ do
             #definitely occupies the 2nd position after being shifted to position 1
             # This will be the value of -b option
             param=$2 
-            echo "Found the -b option with parameter value $param";;
+            echo "Found the -b option with parameter value '$param'"
+            #shifts the -b option value to 1st position to shifted by the last shift b4 the done keyword
+            shift;; 
         -c) 
             echo "Found the -c option";;
         --) 
