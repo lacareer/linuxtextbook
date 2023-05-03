@@ -13,6 +13,11 @@ echo
 # SYNTAX
 # getopts optstring parameters
 
+# NOTE THAT THE 'getopts' command processes each option one by one even when combined
+# like: '-abc 'intead of '-a -b -c'
+# Which means the above will have 3 processes - one each for a, b, and c respectively
+# This is important to understand and use OPTIND
+
 # First list each command-line option letter you are going to 
 # use in your script in the in the 'optstring'. THen place a colon, :,
 # after each option that requires a value/argument and getopt parses 
@@ -37,6 +42,9 @@ echo
 # OPTARG => contains the value to be used if an option requires a value
 # OPTIND => contains value of current location with the parameter list  where getopts left off
 # The OPTIND lets you to continue processing othe commandline paramsters after you finish the options
+# As the getopts processes each option, it increments OPTIND environment variable by 1
+# When the getopts reaches the end of the option processing, you can use the OPTIND with 
+# shift command to to ove to the paramters, i.e shift/delete all options using OPTIND value
 
 # Rin script with commands
 # (1) ./5-2-advance-getopt-command.sh -ab BValue -c (shows operation like 'getopt')
@@ -64,7 +72,14 @@ do
 done
 
 echo
+echo "This is  current \$OPTIND value: $OPTIND"
+echo
 
+# -1 bcs the current position, OPTIND, when getopts completes processing all options
+# will be at position of test1, which is 4 as explained below
+# -db BValue1 -e test1 test2
+#  12          3  4
+# and we need to shift all option before it (excluding test1), hence the -1
 shift $[ $OPTIND - 1 ]
 
 count=1
