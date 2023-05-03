@@ -24,13 +24,6 @@ echo
 # THis produces the right result
 # using command to demontrate it => ./4-2-seperate-options-and-paramters.sh -a -b -c -- test1 test2 test33 '
 
-# OPTION 3
-# Using this method to grab options and parameter does not allow 
-# you to combine option, like ./scriptname -ac test
-# To achive that we use the 'getopt' command discussed in the next lession
-# run command to see deficiency: ./4-2-seperate-options-and-paramters.sh -ac 
-
-
 # shift here oprates in the normal way by shifting each option to the left
 # and deleting the current first option
 while [ -n "$1" ]
