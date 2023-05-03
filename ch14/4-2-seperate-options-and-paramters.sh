@@ -14,13 +14,22 @@ echo
 # OPTION 1
 
 # Without '--' treats the parameters as option because it does not know where the parameter list stops
+# This produces the wrong result
 # ./4-2-seperate-options-and-paramters.sh -a -b -c test1 test2 test3'
 
 # OPTION 2
 
 # Without breaks out of the loop once it encounters the '--' flag 
 # and treats anything afterward as a parameter
-# using command to demontrate it => ./4-2-seperate-options-and-paramters.sh -a -b -c -- testmters as option which is wrong'.1 test2 test3 '
+# THis produces the right result
+# using command to demontrate it => ./4-2-seperate-options-and-paramters.sh -a -b -c -- test1 test2 test33 '
+
+# OPTION 3
+# Using this method to grab options and parameter does not allow 
+# you to combine option, like ./scriptname -ac test
+# To achive that we use the 'getopt' command discussed in the next lession
+# run command to see deficiency: ./4-2-seperate-options-and-paramters.sh -ac 
+
 
 # shift here oprates in the normal way by shifting each option to the left
 # and deleting the current first option
