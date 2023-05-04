@@ -32,8 +32,8 @@ done
 echo
 
 # uncomment above code to run code below
-# if you don't ther will be no out bcs the shift
-# command has shiftedand deleted all the shifted params
+# if you don't there will be no output bcs the shift
+# command has shifted and deleted all the shifted params
 
 echo "Shifting 2 places with shift command"
 
