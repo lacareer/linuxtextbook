@@ -69,7 +69,7 @@ else
 fi
 
 echo 
-echo "Example-6: Use Read and pipe  to read from a file"
+echo "Example-6a: Use Read and pipe  to read from a file"
 echo 
 
 # WITH THE '-n' option, YOU DON'T NEED TO PRESS ENTER IF YOU ENTER A VALUE
@@ -85,6 +85,26 @@ cat $location/text.txt | while read line
 do 
     echo
     echo "Line #$count: $line"
+    count=$[ $count + 1 ]
+done
+
+echo
+echo 
+echo "Example-6b: Use Read and input redirect to read from a file"
+echo 
+# using input redirection to read from a file
+# note that that you can change this behaviour from
+# if some after this point you needto read input.
+# it will default to reading from this file
+# To stop this behaviour create your own redirect 
+# as discussed in ch15
+
+exec 0< text.txt #reads in file content
+
+while read inputRedirect
+do 
+    echo
+    echo "Line #$count: $inputRedirect"
     count=$[ $count + 1 ]
 done
 
