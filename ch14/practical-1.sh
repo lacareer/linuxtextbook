@@ -11,8 +11,10 @@ echo
 # RUN SCRIPT WITH THIS COMMAND BELOW
 # './practical-1.sh -t IPv4 192.168.1.102 192.168.1.103'
 
+# determine command-line entered by user
 while getopts t: opt
 do
+    # tries to get the value of the option enter via command-line,  either IPv4 or IPv6
     case "$opt" in 
         t)
             if [ $OPTARG = "IPv4" ]
@@ -34,9 +36,9 @@ do
             echo
             exit;;
     esac
-
+    # uses shift to delete all entered options
     shift $[ $OPTIND -1 ]
-
+    # checks that total param is not 0
     if [ "$#" -eq 0 ]
     then 
         echo
@@ -45,7 +47,7 @@ do
         echo "Existing scripting ..."
         exit 
     fi 
-
+    # ping all entered addresses
     for ipaddress in "$@"
     do
         echo
