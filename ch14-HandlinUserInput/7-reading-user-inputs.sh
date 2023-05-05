@@ -73,7 +73,7 @@ echo "Example-6a: Use Read and pipe  to read from a file"
 echo 
 
 # WITH THE '-n' option, YOU DON'T NEED TO PRESS ENTER IF YOU ENTER A VALUE
-# -n help your script to conount the number of characters entered by the user
+# -n help your script to count the number of characters entered by the user
 # This can be jused to ask a user if he/she wants to read from a file
 # The script returns a zero exit status for each line in a file with content and
 # a non-zero exit code for lines without content or when it finishes reading the file
