@@ -1,0 +1,3 @@
+-rw-rw-r--. 1 centos-docker-host centos-docker-host 99 May 12 01:18 testfile
+centos-docker-host :0           2023-05-12 00:47 (:0)
+centos-docker-host pts/0        2023-05-12 00:49 (:0)
