@@ -1,0 +1,4 @@
+ls: cannot access test: No such file or directory
+ls: cannot access test3: No such file or directory
+ls: cannot access badfile: No such file or directory
+-rw-rw-r--. 1 centos-docker-host centos-docker-host 185 May 12 01:37 test2
