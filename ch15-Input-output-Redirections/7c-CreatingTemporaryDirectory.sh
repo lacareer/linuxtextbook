@@ -8,6 +8,7 @@ echo "The'mktemp -dt filename.XXXXXX' command for temp directory in /tmp"
 echo
 ###############################################################################
 
+currentlocation=$(pwd)
 # creating a temp directory in the linux /tmp  directory
 # To do so, you must pass the -d option when creating the directory, it
 # creates a local directory
@@ -24,22 +25,31 @@ echo "This is a local directory named: $testtempdir"
 echo "This is a directory in: $testtempdir1"
 echo
 
-# creating files in the newly created  directories
-
+# moves into the new directory
 cd $testtempdir
+# creates new files which also and outputs result to the screen
+# as usual with mktemp
 mktemp localtestfile.XXXXXX
 mktemp localtestfile.XXXXXX
 echo
-ls -lh $testtempdir
+ls -lh #list the content of the new directory
+cd $currentlocation # moving back to parent directory
+rm -rf $testtempdir
+
+echo
+
+
 cd $testtempdir1
+# creates new files which also and outputs result to the screen
+# as usual with mktemp
 mktemp temptestfile.XXXXXX
 mktemp temptestfile.XXXXXX
 echo
-ls -lh $testtempdir1
-
+ls -lh #list the content of the new directory
+cd $currentlocation # moving back to parent directory
 echo
 
-rm -rf $testtempdir $testtempdir1
+rm -rf $testtempdir1
 echo
 
 # confirming file is remove and notifying user of the script
