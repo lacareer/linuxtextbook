@@ -112,7 +112,8 @@ do
     echo You should visit the beatiful state of $state
 done 
 
-oldIFS=$IFS #resets IFS back to deafult
+#resets IFS back to deafult
+IFS=$oldIFS
 
 echo 
 echo "For-loop Example-5b. Choosing to use one of Bash IFS - Internal field seperators"
