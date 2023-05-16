@@ -7,7 +7,9 @@ echo
 ###############################################################################
 
 # name of input csv file: members.csv (each line contains a user info that is comma delimited )
-# name of output sql file: members.sql
+# Make sure to add/hit enter key after the last char on the last line of the csv file
+# Otherwise the script will not see it as a new line to read from
+# Name of output sql file: members.sql
 # ${1} = means first option passed in the command line(file where to read data from)
 # EOF ..... EOF = encloses the content to be be redirected to the otput file
 # run script like this: ./practical.sh < members.csv
@@ -17,8 +19,12 @@ echo
 # Then use the enter key to move to the next line
 # name of file to output result to
 outfile='members.sql'
-inputfile=$1
+echo "The file name entered on the commandline is: "$1
+echo
+inputfile="$(pwd)/$1"
+echo "Absolute path of the file is shown below:"
 echo $inputfile
+
 oldIFS=$IFS #stores default IFS
 IFS=$',' # Creates a custom IFS
 
@@ -30,5 +36,19 @@ do
     INSERT INTO members (lname,fname,address,city,state,zip) VALUES
     ('$lname', '$fname', '$address', '$city', '$state', '$zip');
 EOF
-done < "$1"
+# done < ${1} 
+# or the above
+done < $inputfile
 IFS=$oldIFS # reset to default IFS
+
+# NOW "cat members.sql" to see contents ready to ran
+# on an sql database
+echo
+echo "SQL file with ready insert statements"
+echo
+cat $outfile
+echo
+# removing the newly creatd file
+rm -f $outfile
+
+exit
