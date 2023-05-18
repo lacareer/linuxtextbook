@@ -18,6 +18,7 @@ echo
 # }
 
 # Notes:
+# make sure there space between function name or () and the opening curly braces, {
 # make sure a function is defined b4 you try to call it
 # Make  sure function names are unique to avoid one function overwriting the other      
 # Function are treated like scripts. SO, a new shell is created, independent of the curren sheell

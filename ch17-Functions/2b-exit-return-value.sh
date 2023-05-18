@@ -14,4 +14,17 @@ echo
 # exit status of the function
 
 # Run the script twice using, as an example, the values below
-# /NOTE: Enter this value, 20 and 200, when  you run the script
+# /NOTE: Enter this value:
+# (1) 20 (should return the correct value because last line with return statement has value between 0-255)
+# (2) 200 (should return a wrong value, only the first number(1) in the result(144 [which is 400-256])
+#  return because last line with return statement has value not between 0-255)
+
+function db1 {
+    read -p "Please enter a number value: " value
+    echo "Doubling the value of the number you entered"
+    return $[ $value * 2 ]
+}
+
+db1
+echo "THe new value is $?"
+echo
