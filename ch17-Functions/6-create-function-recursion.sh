@@ -9,7 +9,6 @@ echo
 # run script: './6-create-function-recursion.sh' and enter 5 as a value
 
 function factorial {
-    # echo $1
     if [ $1 -eq 1 ]
     then
         echo 1
