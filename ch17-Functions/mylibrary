@@ -1,0 +1,27 @@
+###############################################################################
+echo 
+echo "This scripts creates a library to be imported into another script"
+echo 
+###############################################################################
+
+function addem {
+    echo $[ $1 + $2 ]
+    echo
+}
+
+function multem {
+    echo $[ $1 * $2 ]
+    echo
+}
+
+function divem {
+    if [ $2 -ne 0 ] || [ $1 -ne 0 ]
+    then 
+        echo $[ $1 / $2 ]
+        echo
+    else
+        echo -1
+        echo
+    fi
+    echo
+}
