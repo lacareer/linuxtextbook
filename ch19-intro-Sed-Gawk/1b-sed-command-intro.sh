@@ -45,3 +45,12 @@ echo
 sed -f script1.sed data1.txt
 echo
 echo
+
+echo 
+echo "Example-5: SED numeric address grouping in Linux"
+echo 
+# substitutes words using the file using address grouping
+# changes line 3 to end
+sed -f pattern.sed data1.txt 
+echo
+echo
