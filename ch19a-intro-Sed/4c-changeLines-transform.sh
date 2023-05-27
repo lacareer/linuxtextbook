@@ -6,8 +6,7 @@ echo "This scripts shows the basic commands using SED change and transform edito
 echo 
 ##########################################################################################
 
-# insert commands, 'i', commands add a new line before the specifies line
-# delete commands, 'i', commands add a new line after before the specifies line
+# Allows you to change the content of contents of an entire line of text in hthe dta stream
 
 # syntax
 # sed '[address]command\

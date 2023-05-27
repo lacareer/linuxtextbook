@@ -7,7 +7,7 @@ echo
 ##########################################################################################
 
 # insert commands, 'i', commands add a new line before the specifies line
-# delete commands, 'i', commands add a new line after before the specifies line
+# delete commands, 'a', commands add a new line after before the specifies line
 
 # syntax
 # sed '[address]command\
