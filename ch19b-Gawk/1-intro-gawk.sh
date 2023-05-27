@@ -2,7 +2,7 @@
 
 ###############################################################################
 echo 
-echo "This scripts shows the SED editor notes and command  options in Linux"
+echo "This scripts shows the GAWK editor notes and command  options in Linux"
 echo 
 ###############################################################################
 
