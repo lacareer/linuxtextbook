@@ -4,7 +4,7 @@
 
 # 1. Run script with command: ./practical.sh oldscripts 
 
-# 2. Make sure the files in the ch19-practical directory are:
+# 2. Make sure the files in the ch19-practical directory each time you run the script are only :
     # a. practical.sh
     # b. oldscripts folder and contents
 
