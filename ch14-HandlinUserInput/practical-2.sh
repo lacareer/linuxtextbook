@@ -22,7 +22,7 @@ do
     then 
         quitanswer=""
 
-        read -t 10 -n -p "Quit script [Y/N]: " quitanswer
+        read -t 10 -p "Quit script [Y/N]: " quitanswer
 
         case $quitanswer in 
             Y|y)
