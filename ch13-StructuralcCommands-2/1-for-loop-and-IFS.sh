@@ -147,7 +147,7 @@ echo
 
 # make sure to wrap the variable $file in double quotes as this takes care of 
 # files and folders that contains spaces
-for file in /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+for file in /home/centos-docker-host/Desktop/linuxtextbook/ch13-StructuralcCommands-2/*
 do 
     if [ -d "$file" ]
     then
@@ -166,7 +166,7 @@ echo
 # files and folders that contains spaces
 # note that the loop iterates thru the first condition and once completed
 # iterates through the next condition and so on....
-for file in  /home/centos-docker-host/Desktop/* /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+for file in  /home/centos-docker-host/Desktop/* /home/centos-docker-host/Desktop/linuxtextbook/ch13-StructuralcCommands-2/*
 do 
     if [ -d "$file" ]
     then

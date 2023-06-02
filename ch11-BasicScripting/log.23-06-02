@@ -1,0 +1,10 @@
+total 76
+drwxrwxr-x.  2 centos-docker-host centos-docker-host   138 Jun  2 08:31 .
+drwxrwxr-x. 14 centos-docker-host centos-docker-host  4096 Jun  1 18:21 ..
+-rwxrwxr-x.  1 centos-docker-host centos-docker-host  4098 May  1 00:02 ch11.sh
+-rw-rw-r--.  1 centos-docker-host centos-docker-host    14 May  1 00:02 input-redirect.txt
+-rw-rw-r--.  1 centos-docker-host centos-docker-host   882 May  1 00:02 log.23-04-20
+-rw-rw-r--.  1 centos-docker-host centos-docker-host     0 Jun  2 08:31 log.23-06-02
+-rwxrwxr-x.  1 centos-docker-host centos-docker-host  2002 May  1 00:02 math.sh
+-rwxrwxr-x.  1 centos-docker-host centos-docker-host   742 May  1 00:02 practical.sh
+-rw-rw-r--.  1 centos-docker-host centos-docker-host 47045 May  1 00:02 rpm.list
