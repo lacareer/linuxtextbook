@@ -22,6 +22,9 @@ echo
 # dot, ., special character used to match any single character
 # note at space is regard as a character in regex
 
+# You can defined a character class using []
+# regex tries to match content in the []
+
 
 echo 
 echo "Anchor, ^, special character in regular expressions"
@@ -87,4 +90,70 @@ echo
 
 echo
 sed -n '/.at/p' data6.txt
+echo
+
+echo 
+echo "Character clasess in regular expressions"
+echo 
+
+# Note that all line that contains text that ends with 'at' is printed
+# note that space is regard as a character, the reason line 4 is printed and not line 5
+
+echo -en "1. \n"
+# searches word contain either 'hat' or 'cat'
+sed -n '/[ch]at/p' data6.txt
+echo
+
+echo -n "2. My answer is Yes" | sed -n '/[Yy]es/p'
+echo
+
+echo -n "3. My answer is yes" | sed -n '/[Yy]es/p'
+echo
+
+echo -n "4. My answer is Yes" | sed -n '/[Yy][Ee][Ss]/p'
+echo
+
+echo -n "5. My answer is YeS" | sed -n '/[Yy][Ee][Ss]/p'
+echo
+
+echo -n "6. My answer is YEs" | sed -n '/[Yy][Ee][Ss]/p'
+echo
+
+echo
+echo -en "7. \n"
+# searches line that contains 0-3 as a number
+sed -n '/[0123]/p' data7.txt
+echo
+
+echo
+echo -en "8. \n"
+# searches line contains 5-digit area code
+# results not a 100% accurate bcs it pick one 6-digit area code
+sed -n '/[0123456789][0123456789][0123456789][0123456789]/p' data8.txt
+echo
+
+echo
+echo -en "9. \n"
+# searches line contains 5-digit area code
+# results a 100% accurate using start and end special characters
+# and only picks numbers with 5-digit area code
+sed -n '/^[0123456789][0123456789][0123456789][0123456789][0123456789]$/p' data8.txt
+echo
+
+echo
+echo -en "10. \n"
+# handling multiple words with diffrent  spellings
+sed -n '/maint[ea]n[ae]nce/p; /sep[ea]r[ea]te/p' data9.txt
+echo
+
+echo 
+echo "Negating character clasess in regular expressions"
+echo 
+
+# Note that all line that contains text that ends with 'at' is printed
+# note that space is regard as a character, the reason line 4 is printed and not line 5
+
+echo -en "1. \n"
+# searches word that does not contain either 'hat' or 'cat'
+sed -n '/[^ch]at/p' data6.txt
 echo
