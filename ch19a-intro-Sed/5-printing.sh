@@ -22,7 +22,7 @@ echo
 
 
 echo 
-echo "Example-2: Using Sed print, p, command"
+echo "Example-2a: Using Sed print, p, command"
 echo 
 
 # prints the matching test line to stdout
@@ -31,7 +31,7 @@ echo
 echo 
 
 echo 
-echo "Example-2: Using Sed print, p, command"
+echo "Example-2b: Using Sed print, p, command"
 echo 
 
 # prints only line 2 and 3 to stdout

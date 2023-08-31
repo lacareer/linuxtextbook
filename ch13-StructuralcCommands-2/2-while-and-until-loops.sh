@@ -80,6 +80,8 @@ echo
 
 # Note that same logic that applies to while loop with multiple test commands also
 # applies to the until loop too
+# Note that although multiple conditions are provided only the exist status of the last
+# test command/condition (echo $var4 and $[$var4 -eq 0]) is used to determin when the loop stops
 
 var4=100
 

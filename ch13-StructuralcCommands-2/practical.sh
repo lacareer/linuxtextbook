@@ -15,7 +15,8 @@ echo ""
 # commandline examples: 
 # './practical.sh | more' 
 # './practical.sh | less'
-# oldIFS=oldIFS
+
+# oldIFS=$IFS
 # IFS=":"
 # for folder in $PATH
 # do
@@ -29,15 +30,13 @@ echo ""
 #     done
 # done | less
 
-# IFS=oldIFS
+# IFS=$oldIFS
 
 echo ""
 echo "Example 2: Create multiple user accounts by reading from a file (users.csv)"
 echo ""
 
 # deleting creating users so we can run script multiple times
-
-
 
 if (userdel -r rich ) && (userdel -r christine ) 
 then

@@ -51,7 +51,7 @@ echo
 oldIFS=$IFS # SAVES DEFAULT IFS: Use for resetting
 IFS=$'\n' # SETTTING OUR PREFERENCE TO USE FROM DEFAULT IFS
 
-for line in $(cat /home/centos-docker-host/Desktop/linuxtextbook/ch13/passwd.txt)
+for line in $(cat /home/ec2-user/environment/Bash-Scripting/ch13-StructuralcCommands-2/passwd.txt)
 do
     echo
     echo "Line value is: "$line

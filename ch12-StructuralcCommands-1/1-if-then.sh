@@ -9,16 +9,25 @@
 #       then
 #           commands
 #       fi
+#  OR
+#       if (command)
+#       then
+#           commands
+#       fi
 
 #2.
 #       if command; then
+#           commnads
+#       fi
+#  OR
+#       if (command); then
 #           commnads
 #       fi
 
 
 echo ""
 
-if pwd
+if (pwd)
 then
     echo "This is my current working directory: "
 fi

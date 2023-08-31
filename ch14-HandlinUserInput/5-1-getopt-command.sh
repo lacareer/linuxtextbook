@@ -25,7 +25,7 @@ echo
 # c => option c: -c
 # d => option d: -d
 
-# Note that the order of the option do not matter
+# Note that the order of the options do not matter
 # and as such, no need to stick to a particular order of options
 
 # Also you can pass the 'q' flag to the getopt command 
@@ -40,9 +40,12 @@ echo
 # (1) ./5-1-getopt-command.sh -ac
 # (2) ./5-1-getopt-command.sh -ace (scripts executes completely despite the invalid option 'd')
 # (3) ./5-1-getopt-command.sh -c -d -b BValue -a test1 test2 (shows that order of option does not matter)
-# (4) ./5-1-getopt-command.sh -c -d -b BValue -a "test1 test2" test3 (shows that 'getopt' does not now how  to deal with space in parameters)
+# (4) ./5-1-getopt-command.sh -c -d -b BValue -a "test1 test2" test3 (shows that 'getopt' does not know how  to deal with space in parameters)
 # as it printed test1, test2 and test3 as seperate params instend of just: "test1 test2" and test3
-# Soution to the last command is to  use the advance 'getopts', plural, command
+# Solution to the last command is to  use the advance 'getopts', plural, command
+
+#  Note that the case statement will apply to only options
+# defined in the getopt command. Any option passed not defined there will be ignore bcs of the 'q' flag
 
 # extracting commandline options and values
 set -- $(getopt -q ab:cd "$@")
@@ -65,7 +68,7 @@ do
             echo "Found the -c option";;
         --) 
             shift #shift the last option
-            break;; # breks  out of the loop so only paramters are left unshifted
+            break;; # breaks  out of the loop so only paramters are left unshifted
         *) 
             echo "$1 is  not an option";;
     esac

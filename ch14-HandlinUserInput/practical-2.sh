@@ -9,7 +9,7 @@ echo
 ###############################################################################
 
 # Run script with command: ./practical-2.sh
-# file name  to use => /home/centos-docker-host/Desktop/linuxtextbook/ch14/addresses.txt
+# file name  to use => ~/environment/Bash-Scripting/ch14-HandlinUserInput/addresses.txt
 echo "Please enter a file name with an absolute directory reference..."
 echo
 choice=0
@@ -17,12 +17,12 @@ choice=0
 # get file name with path from user
 while [ $choice -eq 0 ]
 do
-    read -t 60 -p "Please enter name of file: " filename
+    read -t 10 -p "Please enter name of file: " filename
     if [ -z $filename ]
     then 
         quitanswer=""
 
-        read -t 10 -n -p "Quit script [Y/N]: " quitanswer
+        read -t 10 -p "Quit script [Y/N]: " quitanswer
 
         case $quitanswer in 
             Y|y)
@@ -31,7 +31,7 @@ do
                 exit;;
             N|n)
                 echo
-                echo "Please answer question: "
+                echo "Please ensure you enter a file name "
                 choice=0
                 echo;;
             *)
@@ -49,7 +49,7 @@ if [ -s $filename ] && [ -r $filename ]
 then
     echo "$filenameis a file, is readable, and is not empty."
     echo
-    cat $filename | while read line # reads line from top of file and skips any alread read
+    cat $filename | while read line # reads line from top of file and skips any alread read line/s
     do
         ipaddress=$line      
         read line # reads the next line that contains the ip version. Next read continus from the line after it

@@ -6,7 +6,7 @@ echo "This scripts shows the SED editor notes and command  options in Linux"
 echo 
 ###############################################################################
 
-# The sed editor can manipulate dat in a stream based on the commands either entered on the command line 
+# The sed editor can manipulate data in a stream based on the commands either entered on the command line 
 # or contained in a test file. The sed editor operates as follows
 echo "1. Read one data line from the input"
 echo "2. Match that data with the supplied editor commands"

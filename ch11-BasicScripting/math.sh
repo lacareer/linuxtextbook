@@ -67,6 +67,7 @@ var4=71
 # variables defines and used within the function can have space on both side of = as show below
 # and getting variable value dwclared with the  fuction does not use $  sign as shown below
 # Variables defined outside the function can be accessed the usual way as shown below
+# The last line, value of a1 + b1, is returned
 
 var5=$(bc << EOF 
 scale = 4

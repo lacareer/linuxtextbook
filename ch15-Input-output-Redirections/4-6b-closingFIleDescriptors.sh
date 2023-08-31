@@ -31,4 +31,6 @@ echo "" >&3
 echo "Overwrote the content of the file" >&3
 echo "" >&3
 
+exec 3>&-
 
+cat test17file

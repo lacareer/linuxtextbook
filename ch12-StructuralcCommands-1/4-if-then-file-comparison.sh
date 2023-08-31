@@ -42,7 +42,7 @@ file_name="sentinel"
 
 if [ -d $location ]
 then
-    echo "Ok on the  $location directory"
+    echo "Ok on the $location directory"
     echo ""
     echo "Now checking on the file, $file_name..."
     
@@ -67,5 +67,5 @@ fi
 
 # All other file comparison operation works in a similar way as the above
 # Always check if a file exist b4 using it bcs 
-# when jused in a condition it always
+# when used in a condition it always
 # returns true even if the file does not exist as shown below

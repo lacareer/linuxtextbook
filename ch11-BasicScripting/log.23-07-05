@@ -1,0 +1,29 @@
+total 44
+drwxrwxr-x  2 ec2-user ec2-user   118 Jul  5 13:37 .
+drwxrwxr-x 14 ec2-user ec2-user   322 Jun  5 13:51 ..
+-rwxrwxr-x  1 ec2-user ec2-user  4732 Jul  5 13:36 ch11.sh
+-rw-r--r--  1 ec2-user ec2-user    11 Jul  5 13:20 input-redirect.txt
+-rw-rw-r--  1 ec2-user ec2-user     0 Jul  5 13:37 log.23-07-05
+-rwxrwxr-x  1 ec2-user ec2-user  2002 Jun  5 13:51 math.sh
+-rwxrwxr-x  1 ec2-user ec2-user   742 Jun  5 13:51 practical.sh
+-rw-rw-r--  1 ec2-user ec2-user 22132 Jul  5 13:30 rpm.list
+
+total 48
+drwxrwxr-x  2 ec2-user ec2-user   118 Jul  5 13:37 .
+drwxrwxr-x 14 ec2-user ec2-user   322 Jun  5 13:51 ..
+-rwxrwxr-x  1 ec2-user ec2-user  4732 Jul  5 13:36 ch11.sh
+-rw-r--r--  1 ec2-user ec2-user    11 Jul  5 13:20 input-redirect.txt
+-rw-rw-r--  1 ec2-user ec2-user   493 Jul  5 13:37 log.23-07-05
+-rwxrwxr-x  1 ec2-user ec2-user  2002 Jun  5 13:51 math.sh
+-rwxrwxr-x  1 ec2-user ec2-user   742 Jun  5 13:51 practical.sh
+-rw-rw-r--  1 ec2-user ec2-user 22132 Jul  5 13:30 rpm.list
+
+total 48
+drwxrwxr-x  2 ec2-user ec2-user   118 Jul  5 13:37 .
+drwxrwxr-x 14 ec2-user ec2-user   322 Jun  5 13:51 ..
+-rwxrwxr-x  1 ec2-user ec2-user  4732 Jul  5 13:36 ch11.sh
+-rw-r--r--  1 ec2-user ec2-user    11 Jul  5 13:20 input-redirect.txt
+-rw-rw-r--  1 ec2-user ec2-user   986 Jul  5 13:37 log.23-07-05
+-rwxrwxr-x  1 ec2-user ec2-user  2002 Jun  5 13:51 math.sh
+-rwxrwxr-x  1 ec2-user ec2-user   742 Jun  5 13:51 practical.sh
+-rw-rw-r--  1 ec2-user ec2-user 22132 Jul  5 13:30 rpm.list

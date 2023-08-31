@@ -9,7 +9,7 @@ echo
 # Command-line option are passed like parameters but with a '-' as a prefix
 # You can seperate the command-line options and the parameters using a case statement
 # You can do so using the '--' flag. Command-line uses the '--' to indicate end of option list
-# Run script with commands below to demostrate the above'
+# Run script with commands below to demonstrate the above'
 
 # OPTION 1
 
@@ -19,12 +19,12 @@ echo
 
 # OPTION 2
 
-# Without breaks out of the loop once it encounters the '--' flag 
+# Breaks out of the loop once it encounters the '--' flag 
 # and treats anything afterward as a parameter
 # THis produces the right result
-# using command to demontrate it => ./4-2-seperate-options-and-paramters.sh -a -b -c -- test1 test2 test33 '
+# using command to demontrate it => ./4-2-seperate-options-and-paramters.sh -a -b -c -- test1 test2 test3 '
 
-# shift here oprates in the normal way by shifting each option to the left
+# shift here operates in the normal way by shifting each option to the left
 # and deleting the current first option
 while [ -n "$1" ]
 do
@@ -36,8 +36,10 @@ do
         -c) 
             echo "Found the -c option";;
         --) 
-            shift #shift the last option
-            break;; # breks  out of the loop so only paramters are left unshifted
+            echo $@
+            shift #shift the -- flag
+            echo $@
+            break;; # breaks  out of the loop so only paramters are left unshifted
         *) 
             echo "$1 is  not an option";;
     esac

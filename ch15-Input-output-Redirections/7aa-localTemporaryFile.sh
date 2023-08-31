@@ -22,7 +22,7 @@ echo
 # This codes changes everytime your run the scripts
 # Also when the command executes successfully, 
 # the name of the newly created file/s is/are output  to stdout/monitor
-# mktemp fileNAme.XXXXXX
+# mktemp fileName.XXXXXX
 
 echo
 count=0

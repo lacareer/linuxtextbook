@@ -7,6 +7,7 @@ echo
 ######## 
 
 echo "Signal                  Value                   Description"
+echo""
 echo "1                       SIGHUP                  Hang up the process"
 echo "2                       SIGINT                  Interrupts/stops the process(CTRL+C)"
 echo "3                       SIGQUIT                 Stops the process "

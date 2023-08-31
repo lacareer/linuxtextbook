@@ -7,8 +7,8 @@ echo
 ###############################################################################
 
 # The /dev/null file contains nothing always
-# Sometimes you m ay wnat to run a script in the background and 
-# not display the output, stdout or stderr, to the screen
+# Sometimes you may what to run a script in the background and 
+# not display the stdin, stdout or stderr, to the screen
 # THe solution is redirecting to the null file which is thrown away
 # and hence always contains nothing
 # You cannot retrieve anything sent to null file

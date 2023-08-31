@@ -88,7 +88,7 @@ then
 
 else
     echo "The variable is not defined and returns FALSE"
-    echo "The content of the variable $myvariable is empty"
+    echo "The content of the variable \$myvariable is empty"
 fi
 
 echo ""
@@ -109,7 +109,7 @@ if [ $value1 -eq $value2 ]
 then
     echo "The test $value1 is equal to test value $value2"
 else
-    echo "The test $value1 is not equa to the test value $value2"
+    echo "The test $value1 is not equal to the test value $value2"
 fi
 
 echo ""
@@ -145,7 +145,7 @@ str2=zorbfootball
 str3=""
 
 # You must escape the > (\>) or < (\<) when used to compare 
-# Otherwise bash will consider to be output redirect and will create 
+# Otherwise bash will consider it to be output redirect and will create 
 # a file with name the value of str2 (zorbfootball)
 # as this example shows
 

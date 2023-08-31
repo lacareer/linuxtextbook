@@ -24,7 +24,7 @@ echo
 # all input and params as required
 
 # sample => getopts :ab:cd -a -b BValue -cd test1 test2
-# THe above means: get all option with the value where required
+# THe above means: get all options with the values where required
 # : => ignores all options passed that are invalid instead of throwing an error and
 # stopping script execution(like 'q' in getopt)
 # a => option: -a
@@ -40,13 +40,13 @@ echo
 
 # gets option uses the following environment variables
 # OPTARG => contains the value to be used if an option requires a value
-# OPTIND => contains value of current location with the parameter list  where getopts left off
-# The OPTIND lets you to continue processing othe commandline paramsters after you finish the options
+# OPTIND => contains value of current location, index, with the parameter list  where getopts left off
+# The OPTIND lets you to continue processing other commandline paramters after you finish the options
 # As the getopts processes each option, it increments OPTIND environment variable by 1
 # When the getopts reaches the end of the option processing, you can use the OPTIND with 
-# shift command to to ove to the paramters, i.e shift/delete all options using OPTIND value
+# shift command to to move to the paramters, i.e shift/delete all options using OPTIND value
 
-# Rin script with commands
+# Run script with commands
 # (1) ./5-2-advance-getopt-command.sh -ab BValue -c (shows operation like 'getopt')
 # (2) ./5-2-advance-getopt-command.sh -b "BValue1 BValue2" -a (unlike 'getopt', getopts accomodates spaces between a single parameter)
 # (3) ./5-2-advance-getopt-command.sh -abBValue1 (can squish options and param as  shown)

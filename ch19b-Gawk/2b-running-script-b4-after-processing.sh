@@ -33,7 +33,7 @@ echo
 echo 
 echo "Example-2: Gawk using the keyword BEGIN"
 echo 
-# Tells gaw to run the program immediately after the keyword BEGIN
+# Tells gawk to run the program immediately after the keyword BEGIN
 gawk 'BEGIN {print "The data2 file contents: "} {print $0}' data2.txt
 echo 
 echo

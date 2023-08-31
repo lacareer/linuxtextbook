@@ -48,7 +48,7 @@ echo
 echo
 
 echo 
-echo "Example-4: SED numeric address grouping in Linux"
+echo "Example-4: SED numeric address grouping in Linux directly on command line"
 echo 
 
 sed '3,$s/dog/cat/; 3,$s/brown/red/' data1.txt 
@@ -56,10 +56,12 @@ echo
 echo
 
 echo 
-echo "Example-5: SED numeric address grouping in Linux"
+echo "Example-5: SED numeric address grouping in Linux using a file"
 echo 
 
-# substitutes words using the file
+# substitutes words using the file using address grouping
+# changes line 3 to end
 sed -f pattern.sed data1.txt 
 echo
 echo
+

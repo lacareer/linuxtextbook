@@ -7,7 +7,7 @@ echo
 ######## 
 # THe default file descriptors are: 0-2
 # you can have a max of 9 file scriptors per scripts
-# That means you can create file descriptors of 3-8 custome
+# That means you can create file descriptors of 3-8 custom
 # 
 # creates a custom permanent redirection stdout
 # Line #1 and #3 output/redirects to the default stdout, the monitor,

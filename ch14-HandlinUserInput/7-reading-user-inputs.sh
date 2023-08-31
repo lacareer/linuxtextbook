@@ -40,7 +40,7 @@ echo "You are welcome, $first $last!"
 echo
 
 echo 
-echo "Example-4: Use Read, with -p flag and 'REPLY' variable, to prompt and grab user inputs"
+echo "Example-4: Use Read, with -p flag and 'REPLY' variable, to prompt and grab all user inputs"
 echo 
 
 read -p "Please enter your first and last name: " 
@@ -74,11 +74,11 @@ echo
 
 # WITH THE '-n' option, YOU DON'T NEED TO PRESS ENTER IF YOU ENTER A VALUE
 # -n help your script to count the number of characters entered by the user
-# This can be jused to ask a user if he/she wants to read from a file
+# This can be used to ask a user if he/she wants to read from a file
 # The script returns a zero exit status for each line in a file with content and
 # a non-zero exit code for lines without content or when it finishes reading the file
 
-location="/home/centos-docker-host/Desktop/linuxtextbook/ch14"
+location="/home/ec2-user/environment/Bash-Scripting/ch14-HandlinUserInput"
 count=1
 
 cat $location/text.txt | while read line
@@ -94,7 +94,7 @@ echo "Example-6b: Use Read and input redirect to read from a file"
 echo 
 # using input redirection to read from a file
 # note that that you can change this behaviour from
-# if some after this point you needto read input.
+# if some after this point you need to read input.
 # it will default to reading from this file
 # To stop this behaviour create your own redirect 
 # as discussed in ch15

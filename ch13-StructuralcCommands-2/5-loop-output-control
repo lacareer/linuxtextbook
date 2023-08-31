@@ -14,7 +14,7 @@ echo ""
 
 # output of the loop is not printed to the screen but redirect to a file 
 # by adding the redirection to the end of the done command of the loop
-for file in /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+for file in /home/ec2-user/environment/Bash-Scripting/ch13-StructuralcCommands-2/*
 do 
     if [ -d "$file" ]
     then

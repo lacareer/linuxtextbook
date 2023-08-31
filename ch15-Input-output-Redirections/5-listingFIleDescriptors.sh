@@ -20,7 +20,9 @@ echo
 exec 3> test18file1
 exec 6> test18file2
 exec 7< testfile 
-# displays default file descriptors 0,1,2,3,6,and 7 to the screen
+
+cat <&7
+# displays default and custom file descriptors 0,1,2,3,6,and 7 to the screen
 # Note that the default descriptor has type CHR and custom has REG
 /usr/sbin/lsof -a -p $$ -d 0,1,2,3,6,7
 echo

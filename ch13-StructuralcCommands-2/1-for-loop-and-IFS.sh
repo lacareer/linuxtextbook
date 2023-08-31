@@ -41,7 +41,9 @@ done
 echo
 
 # produces right result by escaping the single quotes with "\" or ""
-for test in I don\'t know if "this'll" work
+
+for test in I "don't" know if "this'll" work #OR with "\"
+# for test in I don\'t know if this\'ll work
 do 
     echo "Word is: $test"
 done 
@@ -89,7 +91,7 @@ do
     echo You should visit the beatiful state of $state
 done 
 
-# By default,Bash considers "soace, tab, and newline" as filed separators
+# By default,Bash considers "space, tab, and newline" as filed separators
 # However, you can tell bash which of them you want to use or define yours
 # You can define as many IFS as you want
 # It is best practice to reset the IFS to default after setting it
@@ -112,7 +114,7 @@ do
     echo You should visit the beatiful state of $state
 done 
 
-#resets IFS back to deafult
+#resets IFS back to default
 IFS=$oldIFS
 
 echo 
@@ -147,7 +149,7 @@ echo
 
 # make sure to wrap the variable $file in double quotes as this takes care of 
 # files and folders that contains spaces
-for file in /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+for file in /home/ec2-user/environment/Bash-Scripting/ch13-StructuralcCommands-2/*
 do 
     if [ -d "$file" ]
     then
@@ -166,7 +168,7 @@ echo
 # files and folders that contains spaces
 # note that the loop iterates thru the first condition and once completed
 # iterates through the next condition and so on....
-for file in  /home/centos-docker-host/Desktop/* /home/centos-docker-host/Desktop/linuxtextbook/ch13/*
+for file in /home/ec2-user/environment/* /home/ec2-user/environment/Bash-Scripting/ch13-StructuralcCommands-2/*
 do 
     if [ -d "$file" ]
     then

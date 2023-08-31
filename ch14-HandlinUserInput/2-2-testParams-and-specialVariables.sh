@@ -39,7 +39,7 @@ echo
 
 # $@ treats all command-line params as one paramter
 echo "The value of \$@ treat all input as one params and can be iterated through"
-echo "The value of \$* is $@"
+echo "The value of \$@ is $@"
 echo
 
 # treats the params as a single passed params

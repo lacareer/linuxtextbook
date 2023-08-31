@@ -16,8 +16,8 @@ currentlocation=$(pwd)
 # command returns the absolute/full path of the newly created directory
 # when the command executes successfully, 
 
-testtempdir=$(mktemp -d testtempdir.XXXXXX) #creates a local directory
-testtempdir1=$(mktemp -dt testtempdir1.XXXXXX) #creates a directory in /tmp
+testtempdir=$(mktemp -d testtempdir.XXXXXX) #creates a local directory(file path is not output)
+testtempdir1=$(mktemp -dt testtempdir1.XXXXXX) #creates a directory in /tmp(output abasolute path)
 echo
 
 # prints new temp directory absolute path

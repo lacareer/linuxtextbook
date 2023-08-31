@@ -25,8 +25,11 @@ echo "Example-2: Changes line with matching text to stdout"
 echo 
 
 # follow syntax strictly
-sed '/3rd line/c\
-This is the changed line of text' data6.txt 
+# sed '/3rd line/c\
+# This is the changed line of text' data6.txt 
+
+# Or like below. Same sa above
+sed '/3rd line/c\This is the changed line of text' data6.txt 
 echo
 echo
 
@@ -68,8 +71,8 @@ echo
 # syntax for transform: [address]y/inchars/outchars
 # replaces all occurence
 
-# replaces char 1 and 1 with 6 and 6 respectively
-echo "Test #1 for try #1." | sed 'y/123/678/'
+# replaces char 1 and 1 with 6 and 6 respectively and same 3 with 8
+echo "Test #1 for try #1. Test #3 for try #3" | sed 'y/123/678/'
 echo
 echo
 

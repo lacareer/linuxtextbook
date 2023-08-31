@@ -14,15 +14,15 @@ echo
 # new line'
 
 echo 
-echo "Example-1: Inserts line to stdout"
+echo "Example-1: Inserts line to stdout, always to the top"
 echo 
 
-echo "Test Line 2" | sed 'i\Test Line 1'
+echo "Test Line 2" | sed 'i\Test Line 3'
 echo 
 echo
 
 echo 
-echo "Example-2: Inserts line to stdout"
+echo "Example-2: Append line to stdout, after the last line"
 echo 
 
 echo "Test Line 1" | sed 'a\Test Line 2'

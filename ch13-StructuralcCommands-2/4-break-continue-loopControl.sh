@@ -63,18 +63,19 @@ do
         if [ $b -eq 2 ]
         then
             echo "Breaking out of the inner bcs loop bcs $b = 2"
-            break 
+            break # default number of level to break out from is 1
         fi       
     done
 done
 
 echo 
-echo "Nested loop Example-2a: Breaking outter loops from inner loops using the n=2 flag"
+echo "Nested loop Example-2b: Breaking outter loops from inner loops using the n=2 flag"
 echo 
 # breaking outter loops from inner loops using the n flag in 'break n'
-# 'n' indicates the level of loop to break out from counting from where the 'break n' is used
+# 'n' indicates the level of loop/'if condition' to break out from counting from where the 'break n' is used
 # by default n = 1
-# 
+# 'break' without a number, n, applies only to a loop
+# But with an n, number, it inclused an 'if  condition' too
 
 for number in 1 2 3 4 5 6 7 8 9 10
 do
@@ -82,13 +83,13 @@ do
 
     if [ $number -eq 3 ]
     then
-        echo "Breaking out of the outer loop bcs $number = 5"
-        break 2 # stops the out loop
+        echo "Breaking out of the outer loop bcs $number = 3"
+        break 2 # breaks out from 2 loops/'if condition' starting from the one with the keyword 'break'
     fi
 done
 
 echo 
-echo "Nested loop Example-2b: Breaking outter loops from inner loops using the n=3 flag"
+echo "Nested loop Example-2c: Breaking outter loops from inner loops using the n=3 flag"
 echo 
 
 for number in 1 2 3 4 5 6 7 8 9 10

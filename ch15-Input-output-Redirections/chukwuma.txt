@@ -1,0 +1,8 @@
+
+This scripts shows how to create temporary redirections in Linux
+
+
+Example-1: Creates temporary error redirections in Linux
+
+This is a normal output
+

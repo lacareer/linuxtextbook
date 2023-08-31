@@ -13,6 +13,7 @@ echo
 # After the function executes, you can use the standard '$?' variable to determine the 
 # exit status of the function
 
+# A better solution to using the return 'keyword'
 # Run the script twice using, as an example, the values below
 # /NOTE: Enter this value:
 # (1) 200

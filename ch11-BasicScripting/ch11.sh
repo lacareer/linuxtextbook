@@ -12,7 +12,7 @@ echo "Let's see today's date and who's logged on using multi-line multiple comma
 echo
 
 date
-
+# Does not work on cloud 9 but does with my centos linux machine
 who
 
 echo
@@ -41,7 +41,7 @@ echo
 days=5
 guest="Jessica"
 
-# Prints:  "Always escape the dollar sign when jused in a string as a symbool: 5" bcs $1 is an undefined variable
+# Prints:  "Always escape the dollar sign when jused in a string as a symbool. Displays "5" bcs $1 is an undefined variable
 echo "Always escape the dollar sign when used in a string as a symbool: $15"
 echo
 
@@ -77,8 +77,8 @@ echo
 #****** Command substitions********
 
 # Command substitution can be done using:
-# 1. $(): dollar sign with 2 bracket enclosing the command for system defined fictions like: var1=$(date)
-# 2. ():withoutthe  dollar sign and just the 2 bracket enclosing the command for user defined fictions like: var=1;var2=($var1)
+# 1. $(): dollar sign with 2 bracket enclosing the command for system defined functions like: var1=$(date)
+# 2. ():without the dollar sign and just the 2 bracket enclosing the command for user defined fictions like: var=1;var2=($var1)
 # 3. ``: two backtick character enclosing the command
 
 echo "This command substitution display today's date using \$(): $(date)"
@@ -107,18 +107,34 @@ today=$(date +%y-%m-%d)
 # Note that the ls -la Bash\ Scripting command does not output anything to the screen bcs 
 # it is redirected away from the screen to the file
 
-ls -la ~/Bash\ Scripting/ch11 > log.$today
+ls -la /home/ec2-user/environment/Bash-Scripting/ch11-BasicScripting > log.$today 
+
+echo "" >> log.$today #adds a whitespace
+# same as 1st ls command that redirects to file (without using the path) but this appends to the file
+ls -la >> log.$today 
+
+echo "" >> log.$today #adds a whitespace
 
 # Appends the output without overwriting the file content if it exist
-
 ls -la >> log.$today
 
 #***** Input redirection(uses < or <<) *********
-# <  used with files and << is for inline redirection. See page 286 for more details
+# <  used with files and << is for inline command-line redirection. See page 286 for more details
 # Input redirection runs command contained in a file and outout the result to the screen
 # It is the opposite of Output redirection
+# wc => word count command(output is: line number[0..n], number of words, and number of strings)
 
 wc < input-redirect.txt
+
+echo
+
+# same as using < but << allows you to do input redirection on the command line
+# without the need to store the data a in file
+wc << EOF
+"test string 1"
+"test string 1"
+"test string 1"
+EOF
 
 echo
 
@@ -138,6 +154,8 @@ echo
 
 # now using piping to run all 3 command above and page through output using more
 rpm -qa | sort | tail -n5
+
+echo
 
 
 

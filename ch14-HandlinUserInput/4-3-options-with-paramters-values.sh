@@ -9,10 +9,10 @@ echo
 # Command-line option are passed like parameters but with a '-' as a prefix
 # You can seperate the command-line options and the parameters using a case statement
 # You can do so using the '--' flag. Command-line uses the '--' to indicate end of option list
-# Run script with commands below to demostrate the above'
+# Run script with commands below to demonstrate the above'
 
 # OPTION 1
-# Without breaks out of the loop once it encounters the '--' flag 
+# Breaks out of the loop once it encounters the '--' flag 
 # and treats anything afterward as a parameter
 # THis produces the right result
 # using command to demontrate it => ./4-3-options-with-paramters-values.sh -a -b BValue -d'

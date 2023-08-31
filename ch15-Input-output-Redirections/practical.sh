@@ -11,7 +11,7 @@ echo
 # Otherwise the script will not see it as a new line to read from
 # Name of output sql file: members.sql
 # ${1} = means first option passed in the command line(file where to read data from)
-# EOF ..... EOF = encloses the content to be be redirected to the otput file
+# EOF ..... EOF = encloses the content to be be redirected to the output file
 # run script like this: ./practical.sh < members.csv
 # note that the ending EOF must be indented as shown above, otherwise it throws an error
 # Also there must be no space/tab after the last EOF. 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-###############################################################################
+###########################################################################
 echo 
 echo "This scripts shows how to create your custom redirections in scripts"
 echo "and how  to redirect file decriptors from one to the other or reset to default"

@@ -85,13 +85,13 @@ if grep $anotheruser /etc/passwd
 then
     echo "This user account, $anotheruser, exist on this machine"
 elif ls -d /home/chuks-centos-7/$anotheruser
-    then
-        echo "This user account, $anotheruser, does not exist on this machine"
-        echo ""
-        echo "However, the user directory, $anotheruser, is still not deleted"
-    else
-        echo "The user directory, $anotheruser, has perhaps been removed"
-        echo "As such, no directory with the name $anotheruser exist"
+then
+    echo "This user account, $anotheruser, does not exist on this machine"
+    echo ""
+    echo "However, the user directory, $anotheruser, is still not deleted"
+else
+    echo "The user directory, $anotheruser, has perhaps been removed"
+    echo "As such, no directory with the name $anotheruser exist"
 fi
 
 echo ""

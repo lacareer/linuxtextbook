@@ -6,7 +6,7 @@ echo "This scripts shows various example and notes accessing positional paramete
 echo 
 ########
 # When you use the 'shift' command, it moves each params to the left one position by default
-# You can change the defailt shift on one position by using the 'shift n'
+# You can change the default shift on one position by using the 'shift n'
 # where n is the number to the left to shift
 # Note that once a parameter is shifted, it id deleted and cannot be recovered
 # so shifting: 'a b c d e f' will result in the below by default
@@ -24,9 +24,9 @@ echo "Using the default shift method"
 count=1
 while [ -n "$1" ]
 do
+    echo "Parameter #$count = $1"
     count=$[ $count + 1 ]
     shift
-    echo "Parameter #$count = $1"
 done
 
 echo
